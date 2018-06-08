@@ -12,6 +12,7 @@ import Links from "./Links"
 import Portal from "./Portal"
 import Registration from "./Registration"
 import Kabinet from "./Kabinet"
+import Modal from "./Modal"
 import "./App.css"
 import "./style.css"
 
@@ -31,49 +32,23 @@ import { Input } from 'reactstrap';
 
 const history = createBrowserHistory();
 
-// const Home = () => (
-//   <div>
-//     <h2>Главная</h2>
-//   </div>
-// )
-
-// const News = () => (
-//   <div>
-//     <h2>Новости</h2>
-//   </div>
-// )
-
-
-// const Articles = () => (
-//   <div>
-//     <h2>Статьи</h2>
-//   </div>
-// )
-
-// const Links = () => (
-//   <div>
-//     <h2>Полезные ссылки</h2>
-//   </div>
-// )
-
-// const Kabinet = () => (
-//   <div>
-//     <h2>Личный кабинет</h2>
-//   </div>
-// )
-
-
-
 class App extends React.Component {
     constructor(props){
         super(props);
 
         this.state = {
-            openMenu: false
+            openModal: false
         };
+
+        this.openModal = this.openModal.bind(this);
     }
+
+    openModal(){
+        this.setState({openModal: !this.state.openModal});
+    }
+
   render(){
-    const { openMenu } = this.state;
+    const { openModal } = this.state;
 
     return(
       <BrowserRouter history={history}>
@@ -82,7 +57,7 @@ class App extends React.Component {
             <header>
                 <div className='header-wrap'>
 
-                    <img src={logo} className='logo-img'/>
+                    <img src={logo} className='logo-img' onClick={()=>{this.openModal()}}/>
                     <div className='logo'>
                         <div className='logo-col'> ARCNet </div>
                         <div className='logo-col'> 
@@ -115,6 +90,8 @@ class App extends React.Component {
                 </ul>
             </div>
 
+            {openModal && <Modal openModal={this.openModal}/> }
+
            
 
 
@@ -122,7 +99,7 @@ class App extends React.Component {
 
               <Route exact path="/" component={Home}/>
               <Route exact path="/news" component={News}/>
-              <Route exact path="/news/:newsId" component={NewsItem}/>
+              <Route exact path="/news/:newsId" component={NewsItem} />
               <Route exact path="/portal" component={Portal}/>
               <Route exact path="/articles" component={Articles}/>
               <Route exact path="/articles/:articleId" component={Title}/>

@@ -338,6 +338,9 @@ form{
 .new-item-page-date{
     margin: 20px 0px;
 }
+.new-item{
+    position: relative;
+}
 
 .article-item-page-content{
     display: flex;
@@ -352,4 +355,68 @@ form{
 }
 .article-page-content-text{
     width: 100%;
+}
+.delete-icon{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+
+
+.add-button{
+    border-radius: 50%;
+    position: fixed;
+    background: #1b3145;
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.add-button>div{
+    margin: auto;
+}
+
+
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.modal-wrap{
+    background: #fff;
+    min-width: 800px;
+    margin: auto;
+    z-index: 11;
+    padding: 50px;
+    position: relative;
+}
+.modal-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+.modal-wrap>input{
+    margin: 0px 0px 30px;
+}
+.modal-button{
+    display: inline-block;
+    margin: 20px 0px 0px 0px;
+}
+.modal-close-button{    
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    cursor: pointer;
 }
