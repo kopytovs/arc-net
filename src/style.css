@@ -420,3 +420,40 @@ form{
     width: 25px;
     cursor: pointer;
 }
+
+.portal-wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.portal-wrap>h1{
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.filters{
+    display: flex;
+}
+.filters>.dropdown{
+    margin: 0px 20px 0px 0px;
+}
+.btn-secondary{
+    background-color: #1b3145;
+    border: none;
+}
+
+.used-filters{
+    margin: 30px 0px;
+}
+.used-filters>.title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.delete-filter-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.portal-wrap>h3{
+    text-align: center;
+    margin: 10px 0px 50px;
+}

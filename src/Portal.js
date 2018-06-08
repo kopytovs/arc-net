@@ -5,6 +5,8 @@ import Grid from './Grid'
 import PortalData from './resources/portal'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
+import deleteIcon from './resources/delete.svg'
+
 class Portal extends React.Component{
     constructor(props) {
         super(props);
@@ -138,7 +140,8 @@ class Portal extends React.Component{
         //     || this.state.filters.years.length > 0 ? this.getCurrentData() : [];
         // console.log(currentData)
 		return(
-			<div className="jumbotron portal-wrap" style={{background: "#e3f2fd"}}>
+			<div className="portal-wrap">
+                <h1> Портал </h1>
                 <div class="filters">
                     <Dropdown isOpen={this.state.dropdownOblastOpen} toggle={this.toggleOblast}>
                         <DropdownToggle caret>
@@ -201,20 +204,24 @@ class Portal extends React.Component{
                                 <DropdownItem onClick={this.addYearToFilterArray}>2015</DropdownItem>
                             </DropdownMenu>
                     </Dropdown>
-
-                    <h2> Примененные фильтры </h2>
-
-                    {this.state.filters.towns.map((filter)=>{
-                        return (<div>{filter} <span className='delete-filter' onClick={()=>{this.deleteFilter(filter)}}> Удалить </span></div>)
-                    })}
-                    {this.state.filters.years.map((filter)=>{
-                        return (<div>{filter} <span className='delete-filter' onClick={()=>{this.deleteFilter(filter)}}> Удалить </span></div>)
-                    })}
-                    {this.state.filters.harac.map((filter)=>{
-                        return (<div>{filter} <span className='delete-filter' onClick={()=>{this.deleteFilter(filter)}}> Удалить </span></div>)
-                    })}
                 </div>
 
+                <div className='used-filters'>
+                    <div className='title'> Примененные фильтры </div>
+
+                    {this.state.filters.towns.map((filter)=>{
+                        return (<div>{filter} <span className='delete-filter' onClick={()=>{this.deleteFilter(filter)}}> 
+                            <img className='delete-filter-icon' src={deleteIcon} /> </span></div>)
+                    })}
+                    {this.state.filters.years.map((filter)=>{
+                        return (<div>{filter} <span className='delete-filter' onClick={()=>{this.deleteFilter(filter)}}> <img className='delete-filter-icon' src={deleteIcon} /> </span></div>)
+                    })}
+                    {this.state.filters.harac.map((filter)=>{
+                        return (<div>{filter} <span className='delete-filter' onClick={()=>{this.deleteFilter(filter)}}> <img className='delete-filter-icon' src={deleteIcon} /> </span></div>)
+                    })}
+                </div>
+                
+                <h3> Отфильтрованная информация </h3>
                 <div class='table'>
                     <table>
                         <thead>
