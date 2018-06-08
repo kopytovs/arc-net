@@ -1,4 +1,4 @@
-.nav-item
+/* .nav-item
 {
   padding: 10px;
 }
@@ -65,21 +65,7 @@
   color: #0e1642;
 }
 
-.new-item{
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fff;
-}
-.new-item>img{
-  width: 100%;
-}
-.new-item>h1{
-  font-size: 30px;
-}
-.new-item>.date{
-  font-size: 15px;
-  margin-top: 20px;
-}
+
 
 .portal-wrap{
   display: flex;
@@ -100,4 +86,4 @@
 }
 .table thead th{
   border-bottom: 1px solid #dee2e6 !important;
-}
+} */

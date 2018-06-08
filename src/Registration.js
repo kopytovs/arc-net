@@ -1,11 +1,11 @@
 import React, {Component} from "react"
 import 'bootstrap/dist/css/bootstrap.css'
 
-class Kabinet extends React.Component{
+class Registration extends React.Component{
     render(){
         return(
             <div className="news lk">
-                <h1> Личный кабинет </h1>
+                <h1> Регистрация </h1>
                 <form>
                     <div className="form-group col-md-auto">
                         <label htmlFor="exampleInputEmail1">Email</label>
@@ -17,13 +17,18 @@ class Kabinet extends React.Component{
                         <input type="password" className="form-control" id="exampleInputPassword1"
                                 placeholder="Password"/>
                     </div>
+                    <div className="form-group col-md-auto">
+                        <label htmlFor="exampleInputPassword1">Повторите пароль</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1"
+                                placeholder="Password"/>
+                    </div>
                     <div className="form-group form-check">
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                             <label className="form-check-label" htmlFor="exampleCheck1">Запомнить меня</label>
                     </div>
                     <div className="row lk-row">
-                        <div className='button'> Войти </div>
-                        <div className='button-question'> Нет аккаунта? </div>
+                        <div className='button'> Зарегестрироваться </div>
+                        <div className='button-question'> Есть аккаунт? </div>
                     </div>
                 </form>
             </div>
@@ -31,4 +36,4 @@ class Kabinet extends React.Component{
     }
 }
 
-export default Kabinet;
+export default Registration;

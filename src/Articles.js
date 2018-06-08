@@ -7,9 +7,19 @@ import articles from './resources/articles'
 class Articles extends React.Component{
 	render(){
 		return(
-			<div className="jumbotron" style={{background: "#e3f2fd"}}>
-				<div className="container">
-					<Grid objects = {articles} name = "articles" status = "tree"></Grid>
+			<div className="news articles">
+				<h1> Статьи </h1>
+				<div className="news-list">
+					{articles.articles && articles.articles.map((newItem)=>(
+                        <Link className='new-item' key={newItem.id} to={'articles/' + newItem.id}>
+							<div className='new-item-image' style={{backgroundImage: `url(${newItem.img})`}}> </div>
+							<div className='new-item-content'>
+								<div className='new-item-title'> {newItem.title} </div>
+								<div className='new-item-decription' dangerouslySetInnerHTML={{ __html: newItem.text }} />
+								<div className='new-item-date'> {newItem.date} </div>
+							</div>
+                        </Link>
+					))}					
 				</div>
 			</div>
 		)

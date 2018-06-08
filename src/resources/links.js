@@ -16,7 +16,7 @@ export default [
     {
         "id": "56c782f18990ecf954f6e027",
         "image": "http://www.forumarctic.com/upload/iblock/0a6/logo.png",
-        "title": "АРКТИКА: НАСТОЯЩЕЕ И БУДУЩЕЕ",
+        "title": "Арктика: настоящее и будущее",
         "url": "http://www.forumarctic.com/conf2017/",
         "text": "Крупный Арктический форум",
     },

@@ -10,8 +10,24 @@ import News from "./News"
 import NewsItem from "./NewsItem"
 import Links from "./Links"
 import Portal from "./Portal"
+import Registration from "./Registration"
 import Kabinet from "./Kabinet"
 import "./App.css"
+import "./style.css"
+
+import facebook from './resources/images/facebook-logo.svg';
+import instagram from './resources/images/instagram.svg';
+import twitter from './resources/images/twitter.svg';
+import vk from './resources/images/vk.svg';
+
+import logo from './resources/images/arctic.svg';
+import search from './resources/images/search.svg';
+
+import russia from './resources/images/russia.svg';
+import usa from './resources/images/united-states.svg';
+
+import { Input } from 'reactstrap';
+
 
 const history = createBrowserHistory();
 
@@ -62,28 +78,46 @@ class App extends React.Component {
     return(
       <BrowserRouter history={history}>
           <div>
-            <nav className="navbar navbar-expand-lg navbar-light" style={{background: "#e3f2fd"}}>
 
-                <a className="navbar-brand" href="/">ARCNet</a>
-                <button className="navbar-toggler" type="button" onClick={()=>{this.setState({openMenu: !this.state.openMenu})}}>
-                <span className="navbar-toggler-icon"></span>
-                </button>
+            <header>
+                <div className='header-wrap'>
 
-                <div className={openMenu ? "navbar-collapse" : "collapse navbar-collapse"} id="navbar-main">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active"><Link to="/" className="btn btn-outline-secondary" role="button" aria-pressed="true">Главная</Link></li>
-                        <li className="nav-item"><Link to="/news" className="btn btn-outline-secondary" role="button" aria-pressed="true">Новости</Link></li>
-                        <li className="nav-item"><Link to="/portal" className="btn btn-outline-secondary" role="button" aria-pressed="true">Портал</Link></li>
-                        <li className="nav-item"><Link to="/articles" className="btn btn-outline-secondary" role="button" aria-pressed="true">Статьи</Link></li>
-                        <li className="nav-item"><Link to="/links" className="btn btn-outline-secondary" role="button" aria-pressed="true">Полезные ссылки</Link></li>
-                        <li className="nav-item"><Link to="/lk" className="btn btn-outline-secondary" role="button" aria-pressed="true">Личный кабинет</Link></li>
-                    </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input type="search" className="form-control mr-sm-2" placeholder="Что ищете?" aria-label="Search"/>
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
-                    </form>
+                    <img src={logo} className='logo-img'/>
+                    <div className='logo'>
+                        <div className='logo-col'> ARCNet </div>
+                        <div className='logo-col'> 
+                            <div className='logo-row'> Arctic </div>
+                            <div className='logo-row'> ScieNce </div>
+                            <div className='logo-row'> EducaTion </div>
+                        </div>
+                    </div>
+
+                    <div className='search'>
+                        <img src={search} />
+                        <Input type="text" name="text" placeholder='Поиск' />
+                    </div>
+
+                    <div className='flags'>
+                        <img src={russia} />
+                        <img src={usa} />
+                    </div>
                 </div>
-            </nav>
+            </header>   
+
+            <div className='menu'>
+                <ul>
+                    <li><Link to='/'>Главная</Link></li>
+                    <li><Link to='/news'>Новости</Link></li>
+                    <li><Link to='/portal'>Портал</Link></li>
+                    <li><Link to='/articles'>Статьи</Link></li>
+                    <li><Link to='/links'>Полезные ссылки</Link></li>
+                    <li><Link to='/lk'>Войти</Link></li>
+                </ul>
+            </div>
+
+           
+
+
 
 
               <Route exact path="/" component={Home}/>
@@ -94,6 +128,30 @@ class App extends React.Component {
               <Route exact path="/articles/:articleId" component={Title}/>
               <Route exact path="/links" component={Links}/>
               <Route exact path="/lk" component={Kabinet}/>
+              <Route exact path="/registration" component={Registration}/>
+
+
+              <footer>
+                    <div className='footer-wrap'>
+                        <ul className='footer-menu'>
+                            <li><Link to='/'>Главная</Link></li>
+                            <li><Link to='/news'>Новости</Link></li>
+                            <li><Link to='/portal'>Портал</Link></li>
+                            <li><Link to='/articles'>Статьи</Link></li>
+                            <li><Link to='/links'>Полезные ссылки</Link></li>
+                            <li><Link to='/lk'>Войти</Link></li>
+                        </ul>
+
+                        <ul className='footer-social'>
+                            <li><Link to='#'><img src={facebook} /></Link></li>
+                            <li><Link to='#'><img src={instagram} /></Link></li>
+                            <li><Link to='#'><img src={twitter} /></Link></li>
+                            <li><Link to='#'><img src={vk} /></Link></li>
+                        </ul>
+                    </div>
+
+              </footer>
+
         </div>
       </BrowserRouter>
     )
