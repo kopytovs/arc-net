@@ -1,12 +1,12 @@
-import img1 from './images/news/1.jpg';
-import img2 from './images/news/2.jpg';
-import img3 from './images/news/3.jpg';
-import img4 from './images/news/4.jpg';
-import img5 from './images/news/5.jpg';
-import img6 from './images/news/6.jpg';
-import img7 from './images/news/7.jpg';
-import img8 from './images/news/8.jpg';
-import img9 from './images/news/9.jpg';
+import img1 from './images/news/11.jpg';
+import img2 from './images/news/12.jpg';
+import img3 from './images/news/13.jpg';
+import img4 from './images/news/14.jpg';
+import img5 from './images/news/15.jpg';
+import img6 from './images/news/16.jpg';
+import img7 from './images/news/17.jpg';
+import img8 from './images/news/18.jpg';
+import img9 from './images/news/19.jpg';
 
 export default 
     {

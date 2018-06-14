@@ -1,12 +1,10 @@
-import img1 from './images/news/1.jpg';
-import img2 from './images/news/2.jpg';
-import img3 from './images/news/3.jpg';
-import img4 from './images/news/4.jpg';
-import img5 from './images/news/5.jpg';
-import img6 from './images/news/6.jpg';
-import img7 from './images/news/7.jpg';
-import img8 from './images/news/8.jpg';
-import img9 from './images/news/9.jpg';
+import img1 from './images/articles/1.png';
+import img2 from './images/articles/2.png';
+import img3 from './images/articles/3.png';
+import img4 from './images/articles/4.png';
+import img5 from './images/articles/5.png';
+import img6 from './images/articles/6.png';
+import img7 from './images/articles/7.png';
 
 export default {
 	"count": 7,
